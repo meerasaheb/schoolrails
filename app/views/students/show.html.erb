@@ -1,0 +1,28 @@
+<h1>Students</h1>
+<p>
+<strong>School:</strong>
+<%= @student.school %>
+</p>
+<p>
+<strong>Rollnumber:</strong>
+<%= @student.rollnumber %>
+</p>
+<p>
+<strong>Name:</strong>
+<%= @student.name%>
+</p>
+<p>
+<strong>Address:</strong>
+<%= @student.address %>
+</p>
+<p>
+<strong>Phonenumber:</strong>
+<%= @student.phonenumber %>
+
+</p>
+<p>
+<strong>Email:</strong>
+<%= @student.email%>
+</p>
+<%= link_to 'Edit',edit_student_path(@student) %>
+<%= link_to 'Back',students_path%>
