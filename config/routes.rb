@@ -27,9 +27,9 @@ Rails.application.routes.draw do
 
   # get 'schools/destroy'
 
-  resources  :schools
-   resources  :students
+ 
    root :to => "schools#index"
-
+        resources  :schools
+   resources  :students
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

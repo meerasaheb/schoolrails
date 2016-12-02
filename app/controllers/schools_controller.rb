@@ -13,6 +13,7 @@ class SchoolsController < ApplicationController
   end
 
   def edit
+     # @school = School.find(params[:id])
   end
 
   def create
@@ -25,14 +26,15 @@ class SchoolsController < ApplicationController
 end
 
   def update
-    respond_to do |format|
+      @school = School.find(params[:id])
+    # respond_to do |format|
       if @school.update(school_params)
-        format.html { redirect_to @school, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @school }
+       redirect_to @school
+      
       else
-        format.html { render :edit }
-        format.json { render json: @school.errors, status: :unprocessable_entity }
-      end
+        render :edit 
+       
+      # end
     end
 
   end
